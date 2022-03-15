@@ -1,0 +1,324 @@
+body {
+    /* more on this crazy alphanumerical value in a minute! */
+    color: #39a6b2;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* apply styles to <header> */
+header {
+    padding: 20px 35px;
+    background-color: #39a6b2;
+}
+
+header h1{
+    font-weight: bold;  /*sets font to lighter, normal, or bold*/
+    font-size: 36px;    /*The size of the font in the element*/
+    color: #fce138; /*sets the text color for the element.  It overrided the color we set for body due to being applied directly to the element*/
+    margin: 0;
+    display: inline;
+}
+
+header a{
+    /*The text decoration is declaring whether something is underline, strikethrough, or overline*/
+    text-decoration: none; 
+    color: #fce138;
+}
+
+header nav {
+    /*The float property takes the element that wants to occupy 100% of its parent's width by default and pushes everything that follows it below it, allowing elements to come alongside of it or wrap around it (also known as inline elements)*/
+    float: right;
+    /*The margin spaces first to the top and bottom (7 so far) and then to the left and right (0 right now)*/
+    margin: 7px 0;
+}
+
+header nav ul li {
+    /*When I added this to the program, the list that was originally shifted to the right now went on a list side by side*/
+    display: inline;
+}
+
+/*So for this one, we've already applied styles to the <a> elements in the header, but now we need to be more specific and give only these particular <a> elements styles that the other <a> element doesn't need.  We are now adding the styles from earlier that was defined and we are then adding this style further in the ul li*/
+header nav ul li a{
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+/*The following is called a universal selectro.  This is essentially a catch-all selector that says "I won't match one thing- I'll match EVERYTHING" */
+* {
+    margin: 0;
+    padding: 0;
+    /*Make sure you add this.  This is what makes the box padding WITHIN.  With the section involving "Made with love by Run Buddy", the link that was aligned to the right was beyond the border*/
+
+    /*border-box calculates the height and width of the element by including the border & padding additions to the content box*/
+    box-sizing: border-box;
+}
+
+footer {
+    background: #fce138;
+    width: 100%;
+    padding : 40px 35px;
+}
+
+footer h2{
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+}
+
+footer div{
+    float: right;
+    /*property assigns how much vertical space should be between lines of text content.  1.5 is generally a good baseline*/
+    line-height: 1.5;
+    text-align: right;
+}
+
+footer a{
+    color: #024e76;
+}
+
+section {
+    padding: 60px;
+}
+
+.intro {
+    text-align: center;
+}
+
+/*Use in what you do for the following containing "steps" classes*/
+
+.steps {
+    text-align: center;
+    background: #fce138;
+}
+
+/*
+.steps h2 {
+    font-size: 55px;
+    color: #024e76;
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    border-bottom: 3px solid;
+    border-color: #39a6b2;
+}
+*/
+
+.intro p {
+    /*On the following code, 0 is referring to the top and bottom context while the auto is calculating the left and right.  When it is set to auto, it takes into account on both side and then calculates the center it.  Once it does, it'll position it there, in the middle.*/
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #39a6b2;
+    width: 80%;
+    font-size: 20px;
+}
+
+/*
+.intro h2{
+    display: inline-block;
+    font-size: 55px;
+    color: #024e76;
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    border-bottom: 3px solid;
+    border-color: #fce138;
+}
+*/
+
+
+.hero {
+    background-image: url("../images/hero-bg.jpg");
+    height: 600px;
+    background-size:cover;
+    background-position: center;
+    /*This is to set the position of the form container to be taken relative to the hero section.  Hence, the term relative*/
+    position: relative;
+}
+
+.hero-secondary {
+    margin: 20px;
+    background-color: black;
+    font-size: 20px;
+    color: red;
+}
+
+.hero-form {
+    border: 3px solid #024e76;
+    background-color: #fce138;
+    padding: 20px;
+    width: 500px;
+    color: #024e76;
+    position: absolute;
+    bottom: 120px;
+    right: 140px;
+}
+
+
+.hero-form h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.hero-form p {
+    margin: 5px 0 15px 0;
+}
+
+.form-input {
+    border: 1px solid #024e76;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #024e76;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.hero-form label {
+    margin: 0 5px;
+}
+
+.hero-form button {
+    color: #fce138;
+    background-color: #024e76;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/*When we added this section up to the secondary-border, we also took out the int and steps h2 to reduce the coding*/
+.section-title {
+    font-size: 55px;
+    color: #024e76;
+    margin-bottom: 35px;
+    padding: 0 100px 20px 100px;
+    display: inline-block;
+    border-bottom: 3px solid;
+}
+  
+.primary-border {
+    border-color: #fce138;
+}
+  
+.secondary-border {
+    border-color: #39a6b2;
+}
+
+
+
+.steps div {
+    margin-bottom: 80px;
+}
+  
+.steps img {
+    width: 15%;
+    margin: 10px 0;
+}
+  
+.steps h3 {
+    color: #024e76;
+    font-size: 46px;
+    margin-top: 10px;
+}
+  
+.steps p {
+    color: #39a6b2;
+    font-size: 23px;
+}
+
+.steps span {
+    font-size: 38px;
+}
+
+.trainers {
+    text-align: center;
+}
+
+.trainer {
+    overflow: auto;
+    width: 900px;
+    margin: 0 auto 30px auto;
+    background: #024e76;
+    color: #fce138;
+}
+
+.trainer img {
+    width: 35%;
+    float: left;
+}
+
+.trainer-bio {
+    padding: 35px;
+    float: left;
+    width: 65%;
+}
+
+.trainer-bio h3 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.trainer-bio h4 {
+    font-weight: lighter;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.trainer-bio p {
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.contact{
+    background: #024e76;
+    text-align: center;
+}
+
+.contact h2 {
+    color:#fce138;
+}
+
+.contact-info iframe {
+    width: 400px; 
+    height: 400px;
+}
+
+.contact-info div {
+    width: 410px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 30px 0 0 60px;
+    color: white;
+}
+
+.contact-info h3 {
+    color: #fce138;
+    font-size: 32px;
+}
+
+
+/*Should there ever be a section that has the same property, you can separate it with a comma and then retype the decleration again with the new class*/
+.contact-info p, .contact-info address {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 20px;
+    font-style: normal;
+}
+
+/*On this one, we're calling the a href link.  If we don't declare a color, its default setting is dark blue.  If we have a color, it'll change it to that as default*/
+.contact-info a {
+    color: #fce138;
+}
+
+/*Remember:  If the declaration with the same name is declared later than the first, that is the one that takes priority and the other will be cancelled.  The order received is what is last
+There's a declaraction of importance that you can do, but it isn't recommended.  It's by adding !important.  With this at the end of the poperty, you can override any conflicting style declaration.  Harder to maintain, though
+
+Sepcifics is another way of identifying.  Look at header h1.  If that was h1, then it'll apply to all h1's, but because we're declarating a specific on the header, then it'll only applied it WITHIN header
+*/
